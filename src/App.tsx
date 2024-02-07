@@ -1,8 +1,12 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const notify = () => toast("Wow so easy, esm!");
+
   return (
     <div className="App">
       <header className="App-header">
@@ -18,6 +22,8 @@ function App() {
         >
           Learn React
         </a>
+        <button onClick={notify}>Notify esm!</button>
+        <ToastContainer />
       </header>
     </div>
   );
